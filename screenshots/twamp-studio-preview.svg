@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgDarkTwamp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020713"/>
+      <stop offset="100%" stop-color="#01030a"/>
+    </linearGradient>
+    <linearGradient id="accentGradTwamp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bgDarkTwamp)"/>
+
+  <!-- Top App Header -->
+  <rect x="30" y="24" width="1140" height="60" rx="10" fill="#0a1329" stroke="#1e3a75" stroke-width="1.5"/>
+  <rect x="46" y="38" width="145" height="32" rx="8" fill="url(#accentGradTwamp)"/>
+  <text x="118" y="59" fill="#020617" font-family="-apple-system, sans-serif" font-weight="900" font-size="11" text-anchor="middle">TWAMP SLA STUDIO</text>
+  
+  <text x="205" y="55" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="800" font-size="18">TWAMPProbeForge Pro</text>
+  <text x="500" y="55" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="600" font-size="12">v1.0.0</text>
+  <text x="555" y="55" fill="#64748b" font-family="-apple-system, sans-serif" font-size="13">| Zero-Trust RFC 5357 TWAMP SLA Studio</text>
+
+  <rect x="850" y="40" width="150" height="28" rx="14" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="925" y="58" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="600" font-size="11" text-anchor="middle">RFC 5357 / RFC 4656</text>
+
+  <rect x="1015" y="40" width="145" height="28" rx="14" fill="#14b8a6" fill-opacity="0.15" stroke="#14b8a6" stroke-opacity="0.4"/>
+  <text x="1087" y="58" fill="#2dd4bf" font-family="-apple-system, sans-serif" font-weight="600" font-size="11" text-anchor="middle">SCORE: 100/100 (A+)</text>
+
+  <!-- Left Column: Parameters & Probe Settings -->
+  <rect x="30" y="100" width="555" height="545" rx="12" fill="#0a1329" stroke="#1e3a75" stroke-width="1.5"/>
+  <text x="50" y="130" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="700" font-size="15">1. RFC 5357 TWAMP-Light Probe Parameters</text>
+
+  <rect x="50" y="145" width="245" height="48" rx="6" fill="#02040a" stroke="#1e3a75"/>
+  <text x="60" y="163" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10">SENDER &amp; TARGET REFLECTOR</text>
+  <text x="60" y="182" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">198.51.100.1 &rarr; 198.51.100.2:862</text>
+
+  <rect x="315" y="145" width="250" height="48" rx="6" fill="#02040a" stroke="#1e3a75"/>
+  <text x="325" y="163" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10">CLOCK SYNCHRONIZATION</text>
+  <text x="325" y="182" fill="#34d399" font-family="monospace" font-size="12" font-weight="700">Hardware PTP (IEEE 1588v2)</text>
+
+  <!-- Probe Preview and Sizing -->
+  <rect x="50" y="205" width="515" height="45" rx="6" fill="#071b16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="65" y="225" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="11">⚡ QoS DSCP EF (46) &bull; Frame Padding: 1400 Bytes &bull; Rate: 100ms</text>
+  <text x="65" y="241" fill="#94a3b8" font-family="monospace" font-size="10">Reflector ACL Whitelist: Enabled &bull; Rate-Limit: 500 pps &bull; OOB VRF: Active</text>
+
+  <!-- Hardening Controls Grid -->
+  <text x="50" y="275" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="700" font-size="13">2. Zero-Trust SLA Measurement Safeguards</text>
+  
+  <rect x="50" y="290" width="245" height="45" rx="6" fill="#071b16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="65" y="310" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="11">🔒 Reflector ACL Protection</text>
+  <text x="65" y="326" fill="#94a3b8" font-family="monospace" font-size="10">Blocks UDP amplification misuse</text>
+
+  <rect x="315" y="290" width="250" height="45" rx="6" fill="#071b16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="330" y="310" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="11">🛡️ Hardware ASIC Timestamps</text>
+  <text x="330" y="326" fill="#94a3b8" font-family="monospace" font-size="10">Eliminates OS scheduling jitter</text>
+
+  <rect x="50" y="345" width="245" height="45" rx="6" fill="#071b16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="65" y="365" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="11">📊 Path MTU Headroom</text>
+  <text x="65" y="381" fill="#94a3b8" font-family="monospace" font-size="10">Tests full 1400B packet latency</text>
+
+  <rect x="315" y="345" width="250" height="45" rx="6" fill="#071b16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="330" y="365" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="11">🌐 Asymmetry Validation</text>
+  <text x="330" y="381" fill="#94a3b8" font-family="monospace" font-size="10">Tracks forward vs return delay</text>
+
+  <!-- Technical Summary Card -->
+  <rect x="50" y="410" width="515" height="215" rx="8" fill="#07122a" stroke="#1e3a75"/>
+  <text x="65" y="435" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="12">TWAMP SLA SPECIFICATION:</text>
+  <text x="65" y="460" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">&bull; RFC 5357 Session-Sender packet formatted with 64-bit NTP timestamps</text>
+  <text x="65" y="485" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">&bull; Sub-microsecond IEEE 1588v2 PTP alignment eliminates negative delay skew</text>
+  <text x="65" y="510" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">&bull; DSCP EF 46 guarantees probe packets sit in high-priority 5G slice queues</text>
+  <text x="65" y="535" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11">&bull; Microsecond RTT &amp; IPDV jitter thresholds configured for real-time alerting</text>
+  <text x="65" y="575" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="11">✅ Production Verified: Cisco IOS-XR, Juniper Junos &amp; Nokia SR-OS</text>
+
+  <!-- Right Column: Scorecard & Wireframe / Synthesizer -->
+  <rect x="615" y="100" width="555" height="545" rx="12" fill="#0a1329" stroke="#1e3a75" stroke-width="1.5"/>
+
+  <!-- Score banner -->
+  <rect x="635" y="120" width="515" height="65" rx="10" fill="#071b16" stroke="#10b981" stroke-width="1.2"/>
+  <rect x="650" y="128" width="48" height="48" rx="8" fill="#10b981" fill-opacity="0.2" stroke="#10b981"/>
+  <text x="674" y="160" fill="#34d399" font-family="monospace" font-weight="800" font-size="22" text-anchor="middle">A+</text>
+  <text x="715" y="145" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="700" font-size="15">Zero-Trust SLA Score: 100 / 100</text>
+  <text x="715" y="165" fill="#34d399" font-family="-apple-system, sans-serif" font-size="11">Hardware PTP Sync • Reflector ACL Guard • DSCP EF Tagging • 1400B Frame Sizing</text>
+
+  <!-- Binary TWAMP Packet Hex Dump -->
+  <text x="635" y="210" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="700" font-size="13">RFC 5357 TWAMP-Test Packet Wireframe (Sender Format)</text>
+  <rect x="635" y="220" width="515" height="120" rx="8" fill="#02040a" stroke="#1e3a75"/>
+  <text x="650" y="242" fill="#64748b" font-family="monospace" font-size="10">// TWAMP-Test Sender Packet (64 Bytes shown):</text>
+  <text x="650" y="262" fill="#38bdf8" font-family="monospace" font-size="10">0000:  00 00 00 01 e8 42 12 a0  2a 14 00 00 00 01 5a 5a  |.....B..*.....ZZ|</text>
+  <text x="650" y="282" fill="#38bdf8" font-family="monospace" font-size="10">0010:  5a 5a 5a 5a 5a 5a 5a 5a  5a 5a 5a 5a 5a 5a 5a 5a  |ZZZZZZZZZZZZZZZZ|</text>
+  <text x="650" y="302" fill="#34d399" font-family="monospace" font-size="10">// Seq: 1 | Timestamp: 2026-10-02 02:56:00 UTC | ErrEst: 0x0001 (1us)</text>
+
+  <!-- Synthesizer Output -->
+  <text x="635" y="365" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="700" font-size="13">Multi-Vendor Synthesizer (Active: Cisco IOS-XR)</text>
+  <rect x="635" y="375" width="515" height="250" rx="8" fill="#02040a" stroke="#1e3a75"/>
+  <text x="650" y="400" fill="#64748b" font-family="monospace" font-size="10">! Cisco IOS-XR RFC 5357 TWAMP-Light Active SLA Probe</text>
+  <text x="650" y="420" fill="#c084fc" font-family="monospace" font-size="10">ipsla</text>
+  <text x="650" y="440" fill="#c084fc" font-family="monospace" font-size="10"> operation 100</text>
+  <text x="650" y="460" fill="#34d399" font-family="monospace" font-size="10">  type twamp-light</text>
+  <text x="650" y="480" fill="#34d399" font-family="monospace" font-size="10">   destination address 198.51.100.2 port 862</text>
+  <text x="650" y="500" fill="#38bdf8" font-family="monospace" font-size="10">   packet-size 1414</text>
+  <text x="650" y="525" fill="#38bdf8" font-family="monospace" font-size="10">   dscp 46</text>
+  <text x="650" y="550" fill="#c084fc" font-family="monospace" font-size="10">ipsla responder twamp-light rate-limit 500</text>
+  <text x="650" y="585" fill="#94a3b8" font-family="monospace" font-size="10">! Also synthesizes: Juniper Junos, Nokia SR-OS, Linux Reflector, Prometheus</text>
+  <text x="650" y="610" fill="#38bdf8" font-family="-apple-system, sans-serif" font-weight="700" font-size="11">✅ 1-Click Multi-Vendor SLA Probe Deployment</text>
+</svg>

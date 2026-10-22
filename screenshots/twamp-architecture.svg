@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500">
+  <defs>
+    <linearGradient id="bgArchTwamp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020713"/>
+      <stop offset="100%" stop-color="#01030a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="500" fill="url(#bgArchTwamp)"/>
+
+  <text x="500" y="45" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="20" text-anchor="middle">
+    RFC 5357 TWAMP SLA Architecture: Reflector Abuse Risk vs Zero-Trust SLA Pipeline
+  </text>
+
+  <!-- Left: Vulnerable Architecture -->
+  <rect x="40" y="80" width="430" height="380" rx="10" fill="#14060c" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="55" y="95" width="400" height="34" rx="6" fill="#ef4444" fill-opacity="0.2"/>
+  <text x="255" y="118" fill="#f87171" font-family="-apple-system, sans-serif" font-weight="700" font-size="14" text-anchor="middle">
+    Hazardous: Open Unauthenticated Reflector
+  </text>
+
+  <rect x="55" y="145" width="400" height="60" rx="6" fill="#02040a" stroke="#242f5d"/>
+  <text x="70" y="170" fill="#fca5a5" font-family="monospace" font-size="11">Open UDP 862 Port &bull; Unverified System Clock</text>
+  <text x="70" y="190" fill="#ef4444" font-family="-apple-system, sans-serif" font-size="11">Best-Effort DSCP 0 &bull; 0B Padding &bull; Unbounded Reflector Rate</text>
+
+  <rect x="55" y="220" width="400" height="220" rx="6" fill="#1c0710" stroke="#ef4444" stroke-opacity="0.4"/>
+  <text x="70" y="245" fill="#f87171" font-family="-apple-system, sans-serif" font-weight="700" font-size="12">CRITICAL SLA &amp; SECURITY RISKS:</text>
+  <text x="70" y="275" fill="#fca5a5" font-family="-apple-system, sans-serif" font-size="11">&bull; Open reflector weaponized as UDP reflection DDoS amplification source</text>
+  <text x="70" y="305" fill="#fca5a5" font-family="-apple-system, sans-serif" font-size="11">&bull; Unsynchronized clock generates negative one-way delay (OWD) artifacts</text>
+  <text x="70" y="335" fill="#fca5a5" font-family="-apple-system, sans-serif" font-size="11">&bull; Best-Effort DSCP 0 probe sits in congested queues, misreporting SLA</text>
+  <text x="70" y="365" fill="#fca5a5" font-family="-apple-system, sans-serif" font-size="11">&bull; High-rate probe stream exhausts router route-processor CPU</text>
+  <text x="70" y="415" fill="#ef4444" font-family="-apple-system, sans-serif" font-weight="700" font-size="12">DDOS AMPLIFICATION &bull; CLOCK SKEW &bull; CPU STARVATION</text>
+
+  <!-- Right: Hardened Zero-Trust Architecture -->
+  <rect x="530" y="80" width="430" height="380" rx="10" fill="#061614" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="545" y="95" width="400" height="34" rx="6" fill="#10b981" fill-opacity="0.2"/>
+  <text x="745" y="118" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="14" text-anchor="middle">
+    Hardened: TWAMPProbeForge Zero-Trust
+  </text>
+
+  <rect x="545" y="145" width="400" height="60" rx="6" fill="#02040a" stroke="#242f5d"/>
+  <text x="560" y="170" fill="#34d399" font-family="monospace" font-size="11">Hardware PTP IEEE 1588v2 &bull; Sender ACL Whitelist</text>
+  <text x="560" y="190" fill="#38bdf8" font-family="monospace" font-size="11">DSCP EF 46 &bull; 1400B Padding &bull; 500 pps Reflector Rate Limit</text>
+
+  <rect x="545" y="220" width="400" height="220" rx="6" fill="#071b16" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="560" y="245" fill="#34d399" font-family="-apple-system, sans-serif" font-weight="700" font-size="12">ENTERPRISE TELEMETRY GUARANTEES:</text>
+  <text x="560" y="275" fill="#86efac" font-family="-apple-system, sans-serif" font-size="11">&bull; Hardware PTP guarantees sub-microsecond forward &amp; reverse delay</text>
+  <text x="560" y="305" fill="#86efac" font-family="-apple-system, sans-serif" font-size="11">&bull; Sender ACL whitelist completely eliminates UDP reflection abuse</text>
+  <text x="560" y="335" fill="#86efac" font-family="-apple-system, sans-serif" font-size="11">&bull; DSCP EF 46 tests actual priority queuing experienced by live traffic</text>
+  <text x="560" y="365" fill="#86efac" font-family="-apple-system, sans-serif" font-size="11">&bull; Reflector rate-limit (500 pps) protects switch control plane</text>
+  <text x="560" y="415" fill="#10b981" font-family="-apple-system, sans-serif" font-weight="700" font-size="12">RFC 5357 &bull; IEEE 1588v2 &bull; CISCO IOS-XR, JUNIPER &amp; NOKIA</text>
+</svg>
